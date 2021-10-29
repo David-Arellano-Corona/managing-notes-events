@@ -1,0 +1,24 @@
+<div class="screen-center">
+    <div class="sigin-content" >
+        <div class="signin-header">
+            <p class="sigin-header-text" >
+                Hello there! <br>
+                Welcome Back
+            </p>
+        </div>
+        <div class="signin-boody" [formGroup]="siginform">
+            <div class="signin-body-forms">
+                <input type="email" formControlName="email" placeholder="Correo electrónico"  class="form-control form-signin" autofocus >
+                <input type="password" formControlName="password" placeholder="Contraseña"  class="form-control form-signin">
+                <span class="signin-error" >{{password_error}}</span>
+            </div>
+            <div class="signin-body-extra">
+                <label class="signin-forgot" >¿Olvidaste tu contraseña?</label>
+                <button class="btn btn-signin" (click)="signin()" [disabled]="siginform.status == 'INVALID' " >Iniciar sesión</button>
+                <p class="signin-create-account" >
+                    <label>¿No tienes una cuenta? <strong>Registrar</strong> </label>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

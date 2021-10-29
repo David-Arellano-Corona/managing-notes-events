@@ -1,0 +1,21 @@
+<div class="events-container">
+    <app-event-list class="events-list" 
+    (o_onChangeMonth)="onChangeMonth($event)"
+    [i_events]="events"
+    (o_onClickEvent)="onClickEvent($event)"
+    ></app-event-list>
+
+    <div class="events-workspace">
+        <app-calendar (o_onClickDay)="onClickDay($event)" class="events-calendar" *ngIf="showCalendar; else createEvent"></app-calendar>
+        <ng-template #createEvent>
+            <app-create-event class="events-calendar"  (o_back)="back()"
+            [i_year]="year"
+            [i_month]="month"
+            [i_day]="day"
+            [i_labelMonth]="labelMonth"
+            [i_eventDetail]="eventDetail"
+            (o_createEvent)="createEvents($event)"
+            ></app-create-event>
+        </ng-template>
+    </div>
+</div>

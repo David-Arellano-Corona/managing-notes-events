@@ -1,0 +1,22 @@
+<div class="screen-center" >
+    <div class="signup-content" >
+        <div class="signup-header">
+            <label class="signup-header-text" >Sign Up</label>
+        </div>
+        <div class="signup-body" >
+            <div class="signup-body-inputs" [formGroup]="signup"  >
+                <input type="email"    formControlName="email"   placeholder="E-mail" class="form-control signup-body-inputs-input" >
+                <span *ngIf="email_error" class="signup-input-error" >{{email_error}}</span>
+                <input type="text"     formControlName="username"  placeholder="Username" class="form-control signup-body-inputs-input">
+                <span *ngIf="nickname_error" class="signup-input-error" >{{nickname_error}}</span>
+                <input type="password" formControlName="password"  placeholder="Password" class="form-control signup-body-inputs-input">
+                <span *ngIf="password_error" class="signup-input-error" >{{password_error}}</span>
+                <input type="password" formControlName="confirmpassword"   placeholder="Confirm password" class="form-control signup-body-inputs-input">
+                <span *ngIf="confirmpassword_error" class="signup-input-error" >{{confirmpassword_error}}</span>
+            </div>
+        </div>
+        <button class="signup-footer signup-footer-text" (click)="save()" >
+            Create account
+        </button>
+    </div>
+</div>

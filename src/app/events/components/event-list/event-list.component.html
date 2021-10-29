@@ -1,0 +1,21 @@
+<div class="event-list-content" >
+    <div class="event-list-header">
+        <select class="event-list-month" [formControl]="monthSelected" (change)="onChangeMonth()" >
+            <option class="event-list-month-item"  *ngFor="let month of MONTHS" [value]="month">
+                {{month}}
+            </option>
+        </select>
+    </div>
+    <div class="event-list-events" >
+      <div class="event-list-card" *ngFor="let event of i_events" (click)="onClickEvent(event)" >
+          <label class="event-list-card-name">{{event.name}}</label>
+          <span class="event-list-card-subject">{{event.description}}</span>
+          <span class="event-list-card-time">{{event.starttime | date:'HH:mm'}}</span>
+      </div>  
+      <!--<div class="event-list-card">
+        <label class="event-list-card-name">Nombre del evento</label>
+        <span class="event-list-card-subject">Breve reseña del evento</span>
+        <span class="event-list-card-time">20:30</span>
+      </div>-->  
+    </div>
+</div>

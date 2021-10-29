@@ -1,0 +1,35 @@
+<div class="calendar-content" >
+    <div class="calendar-user-info" >
+        <div class="calendar-user-avatar">
+            <img src="../../../../assets//img/avatar.png" alt="" srcset="">
+        </div>
+        <div class="calendar-reminder">
+            <label class="calendar-reminder-text">
+                Reunión con Daisy Jonhson
+            </label>
+        </div>
+    </div>
+    <div class="calendar-calendar">
+        <div class="calendar-month">
+            <span class="calendar-month-angle" (click)="decreaseMonth()"><fa-icon [icon]="faAngleLeft" style="color: #AEB7BF;" ></fa-icon></span>
+            <label class="calendar-month-text">{{labelMonth}} - {{selectedYear}}</label>
+            <span class="calendar-month-angle" (click)="increaseMonth()"><fa-icon [icon]="faAngleRight" style="color: #AEB7BF;" ></fa-icon></span>
+        </div>
+        <div class="calendar-space" >
+            <div class="calendar-space-label-days">
+                <span class="calendar-square calendar-item-white-color">{{days[0]}}</span>
+                <span class="calendar-square calendar-item-white-color">{{days[1]}}</span>
+                <span class="calendar-square calendar-item-white-color">{{days[2]}}</span>
+                <span class="calendar-square calendar-item-white-color">{{days[3]}}</span>
+                <span class="calendar-square calendar-item-white-color">{{days[4]}}</span>
+                <span class="calendar-square calendar-item-white-color">{{days[5]}}</span>
+                <span class="calendar-square calendar-item-white-color">{{days[6]}}</span>
+            </div>
+            <div *ngFor="let week of calendarSqare" class="calendar-space-label-days" >
+                <span *ngFor="let day of week" class="calendar-square calendar-item-blue-color calendar-item-size " >
+                    <span (click)="onClickDay(day)" [ngClass]="selectedDay == day? 'calendar-item-hover calendar-item-current-day': 'calendar-item-hover'">{{day}}</span>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,68 @@
+.event-list-content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background: #f2f2f2;
+}
+.event-list-header{
+    background: #FF5A55;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+}
+.event-list-month{
+    background: #FF5A55;
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    margin-left: 30px;
+    outline: none;
+    border: none;
+    width: 30%;
+}
+.event-list-month-item{
+    background: white;
+    font-size: 16px;
+    color: #3D3D3D;
+}
+.event-list-angle-down{
+    color: white;
+    margin-left: 10px;
+    font-size: 18px;
+}
+.event-list-angle-down:hover{
+    cursor: pointer;
+}
+.event-list-events{
+    width: 100%;
+    height: 85%;
+    max-height: 85%;
+    overflow-y: auto;
+    padding: 0px 5px;
+}
+.event-list-card{
+    width: 100%;
+    background: white;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.event-list-card-name{
+    font-weight: bolder;
+    color: #3D3D3D;
+    font-size: 16px;
+    border-bottom: 1px solid #f2f2f2;
+}
+.event-list-card-subject{
+    color: #959595;
+    font-weight: bolder;
+    font-size: 14px;
+}
+.event-list-card-time{
+    color: #D0D3D9;
+    font-weight: bolder;
+    font-size: 13px;
+}

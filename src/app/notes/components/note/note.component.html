@@ -1,0 +1,8 @@
+<div class="note-container"  >
+    <div class="header-note" >
+        <span class="header-note-close" (click)="deletenote($event)" ><fa-icon [icon]="faWindowClose" style="color: #FFFEBC;" ></fa-icon></span>
+    </div>
+    <div (click)="opennote($event)">
+        <div [innerHtml]="preview"></div>
+    </div>
+</div>

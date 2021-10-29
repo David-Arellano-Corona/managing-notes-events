@@ -1,0 +1,17 @@
+<div class="notes-container">
+    <div class="notes-list">
+        <div class="notes-add">
+            <label class="notes-add-text">Nueva nota</label>
+            <button class="btn  btn-notes-add" (click)="newNote()" >+</button>
+        </div>
+        <div class="notes-search">
+            <input type="text" class="form-control form-search" [(ngModel)]="search" (keyup)="searchNote()" placeholder="Buscar...">
+        </div>
+        <div class="notes-list-content" >
+            <app-note  (openNote)="openNote(note)" (deleteNote)="deleteNote(note)" [note]="note" *ngFor="let note of notes" ></app-note>
+        </div>
+    </div>
+    <div class="notes-workspace">
+        <app-workspace *ngIf="showWorkspace" [text]="selectedNote" (createNote)="saveNote($event)" ></app-workspace>
+    </div>
+</div>

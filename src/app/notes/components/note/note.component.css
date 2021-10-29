@@ -1,0 +1,22 @@
+.note-container{
+    width: 92%;
+    background: #FFFEBC;
+    padding: 10px;
+    padding-top: 0px;
+    margin: 10px auto;
+}
+.header-note{
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 5px;
+}
+.header-note:hover{
+    cursor: pointer;
+}
+.header-note-close{
+    background: black;
+    height: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

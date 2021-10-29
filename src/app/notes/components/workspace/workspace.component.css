@@ -1,0 +1,46 @@
+.angular-editor-toolbar-set{
+    display: none!important;
+}
+.workspace-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.workspace-save{
+    width: 100%;
+    height: 8%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.btn-note-save{
+    transform: scale(1.7);
+    margin-right: 11%;
+}
+.btn-note-save:hover{
+    cursor: pointer;
+    transform: scale(1.8);
+}
+.workspace-note{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.workspace-note-content{
+    width: 80%;
+    height: 90%;
+}
+.btn-save-note{
+    background: #EE6B4F;
+    margin-right: 10%;
+    color: white;
+}
+
+@media only screen and (max-width:800px){
+    .workspace-note{
+        height: 80%;
+    }
+}

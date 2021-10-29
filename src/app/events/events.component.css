@@ -1,0 +1,32 @@
+.events-container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: white;
+}
+.events-list{
+    display: flex;
+    width: 30%;
+    height: 100%;
+}
+.events-workspace{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    height: 100%;
+}
+.events-calendar{
+    width: 50%;
+}
+
+@media only screen and (max-width:800px){
+    .events-list{
+        width: 40%;
+    }
+    .events-workspace{
+        width: 60%;
+    }
+    .events-calendar{
+        width: 90%;
+    }   
+}

@@ -1,0 +1,72 @@
+.sigin-content{
+    width: 30%;
+    height: 90%;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0px 0px 15px 10px #CAD8E3;
+    display: flex;
+    align-items: center;
+}
+.signin-header{
+    width: 80%;
+    height: 40%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.sigin-header-text{
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 9%;
+}
+.signin-boody{
+    width: 80%;
+    height: 60%;
+}
+.signin-body-extra{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.form-signin{
+    border: none;
+    border-bottom: 1px solid #c3c3c3;
+    margin: 15px 0px 0px 0px;
+    border-radius: 0px!important;
+    outline: none;
+}
+.form-signin:active{
+    outline: none;
+}
+.btn-signin{
+    width: 100%;
+    background: #EE6B4F!important;
+    color: white;
+}
+.signin-body-forms{
+    height: 30%;
+}
+.signin-forgot{
+    color: #FF5A55;
+    font-size: 12px;
+    font-weight: bold;
+}
+.signin-create-account{
+    width: 100%;
+    text-align: left;
+    color: #cdcdcd;
+    font-size: 13px;
+}
+.signin-error{
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px!important;
+}
+@media only screen and (max-width:800px){
+    .sigin-content{
+        width: 55%;
+    }
+} 

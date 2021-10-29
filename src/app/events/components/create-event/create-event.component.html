@@ -1,0 +1,54 @@
+<div class="create-event-content">
+    <fa-icon [icon]="faArrowLeft" class="create-event-back" (click)="back()" ></fa-icon>
+    <div class="create-event-schedule" [formGroup]="eventForm">
+        <div class="create-event-date" >
+            <span class="create-event-date-label">
+                {{i_year}}/{{i_labelMonth}}/{{i_day}}
+            </span>
+        </div>
+        <div class="create-event-title">
+            <div class="form-group">
+                <label for="">Nombre del evento</label>
+                <input type="text" class="form-control" placeholder="Reunion con cliente"
+                formControlName="name"
+                >
+            </div>
+            <span class="create-event-alert" *ngIf="name.errors && name.touched" >
+                El nombre del evento es un campo obligatorio
+            </span>
+        </div>
+        <div class="create-event-subject">
+            <div class="form-group">
+                <label for="">Descripción del evento</label>
+                <textarea name="" id=""  rows="4" class="form-control" placeholder="(Opcional)"
+                formControlName="description"
+                ></textarea>
+            </div>
+        </div>
+        <div class="create-event-time">
+            <div class="create-event-time-item">
+                <input type="number" min="1" max="23" class="create-event-time-input"
+                formControlName="hourInit"
+                >
+                <span class="create-event-time-separator">:</span>
+                <input type="number" min="0" max="60" class="create-event-time-input"
+                formControlName="minuteInit"
+                >
+            </div>
+            <span class="create-event-time-to">a</span>
+            <div class="create-event-time-item">
+                <input type="number" min="1" max="23" class="create-event-time-input"
+                formControlName="hourEnd"
+                >
+                <span class="create-event-time-separator">:</span>
+                <input type="number" min="0" max="60" class="create-event-time-input"
+                formControlName="minuteEnd"
+                >
+            </div>
+        </div>
+        <span class="create-event-alert" *ngIf="eventForm?.errors?.eventTimeError != undefined && (hourInit.touched && hourEnd.touched && minuteInit.touched && minuteEnd.touched) " >
+            {{eventForm.errors?.eventTimeError}}
+        </span>
+        <button class="btn btn-create-event" [disabled]="!eventForm.valid" (click)="createEvent()" >Crear evento</button>
+</div>
+</div>
