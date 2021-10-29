@@ -10,7 +10,7 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 - Clonar proyecto
 - Entrar a la raiz
 - Ejecutar commando
-````
+```
 npm install
 ```
 - Aditar el archivo config que se encuentra dentro de la carpeta app
